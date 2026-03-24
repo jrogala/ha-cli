@@ -43,22 +43,23 @@ ha setup --token YOUR_TOKEN
 
 ```bash
 $ ha entities --domain light
-ENTITY_ID          STATE  NAME
-light.kitchen      on     Kitchen Light
-light.bedroom      off    Bedroom Light
-light.living_room  on     Living Room
+ENTITY_ID                                                   STATE        NAME
+light.ikea_of_sweden_tradfri_bulb_e27_cws_806lm_light_2    unavailable  Lumiere bureau
+light.ikea_of_sweden_tradfri_bulb_e27_ww_806lm_light       unavailable  Salle de bain
+light.ikea_of_sweden_tradfri_bulb_e27_ww_globe_806lm_light unavailable  Chambre
 
-$ ha call light.turn_on --entity light.living_room --data '{"brightness_pct": 50}'
-Called light.turn_on on light.living_room
+$ ha state sensor.flip_5_battery_level
+Entity:  sensor.flip_5_battery_level
+Name:    flip 5 Battery level
+State:   72
+Updated: 2026-03-18T18:06:00.382339+00:00
+  unit_of_measurement: %
+  device_class: battery
 
-$ ha toggle switch.garage_door
-Toggled switch.garage_door
-
-$ ha state sensor.outdoor_temperature
-Entity:  sensor.outdoor_temperature
-Name:    Outdoor Temperature
-State:   21.5
-Updated: 2026-03-24T10:00:00Z
+$ ha config
+Name:     Home
+Version:  2024.11.2
+Timezone: Europe/Paris
 ```
 
 ## JSON Output
