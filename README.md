@@ -2,6 +2,14 @@
 
 CLI for Home Assistant smart home control.
 
+## Install
+
+Download a binary from the [latest release](https://github.com/jrogala/ha-cli/releases/latest), or install with Go:
+
+```bash
+go install github.com/jrogala/ha-cli@latest
+```
+
 ## Setup
 
 Set env vars or run setup:
