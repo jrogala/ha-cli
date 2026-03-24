@@ -42,17 +42,23 @@ ha setup --token YOUR_TOKEN
 ## Examples
 
 ```bash
-# List all light entities
-ha entities --domain light
+$ ha entities --domain light
+ENTITY_ID          STATE  NAME
+light.kitchen      on     Kitchen Light
+light.bedroom      off    Bedroom Light
+light.living_room  on     Living Room
 
-# Turn on a light at 50% brightness
-ha call light.turn_on --entity light.living_room --data '{"brightness_pct": 50}'
+$ ha call light.turn_on --entity light.living_room --data '{"brightness_pct": 50}'
+Called light.turn_on on light.living_room
 
-# Toggle a switch
-ha toggle switch.garage_door
+$ ha toggle switch.garage_door
+Toggled switch.garage_door
 
-# Check state of a sensor
-ha state sensor.outdoor_temperature
+$ ha state sensor.outdoor_temperature
+Entity:  sensor.outdoor_temperature
+Name:    Outdoor Temperature
+State:   21.5
+Updated: 2026-03-24T10:00:00Z
 ```
 
 ## JSON Output
